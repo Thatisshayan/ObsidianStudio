@@ -2,7 +2,7 @@
 
 Premium websites and landing pages for local service businesses such as contractors, renovation companies, landscapers, barbershops, salons, realtors, mortgage brokers, and clinics.
 
-This repo is a static site with a Netlify Functions contact backend. No build step is required.
+This repo is a static site.
 
 ## Project structure
 
@@ -15,41 +15,40 @@ obsidian-site/
 │   └── realtor.html            # Realtor / advisor demo
 ├── assets/
 │   └── logo.png
+├── CNAME                       # Custom domain for GitHub Pages
+├── .github/workflows/pages.yml # GitHub Pages deployment
 ├── netlify/
 │   └── functions/
-│       └── contact.js          # Form handler (email + HubSpot + webhook)
-├── netlify.toml
+│       └── contact.js          # Legacy backend file kept for reference
+├── netlify.toml                # Legacy Netlify config kept for reference
 ├── package.json
 ├── env.example
 └── README.md
 ```
 
-## Run locally
+## GitHub Pages deploy
 
-1. Install dependencies with `npm install`.
-2. Run `npm run dev` to start Netlify Dev.
-3. Open the local URL shown in the terminal.
+1. Push changes to the `main` branch.
+2. Open the repository settings on GitHub.
+3. Go to **Pages**.
+4. Set **Source** to **GitHub Actions**.
+5. Wait for the workflow to deploy the site.
+6. Visit the GitHub Pages URL shown in the repository settings.
+7. The custom domain `obsidianstudios.online` is declared in `CNAME`.
+8. Point your DNS to GitHub Pages when you are ready to switch the domain.
 
-## Deploy on Netlify
+## Important note
 
-1. Create a new Netlify site and connect this repo.
-2. Set the publish directory to `.`.
-3. Set the functions directory to `netlify/functions`.
-4. Add the environment variables below in Site settings > Environment variables.
-5. Deploy.
-6. Test the contact form at `/api/contact`.
+- GitHub Pages does not run Netlify Functions.
+- The contact form now opens the user's email app with a prefilled message.
+- If you want automated form delivery again later, connect a real form provider or move back to a host with server-side functions.
 
 ## Environment variables
 
-- `CONTACT_TO_EMAIL`
-- `CONTACT_FROM_EMAIL`
-- `RESEND_API_KEY`
-- `HUBSPOT_PRIVATE_APP_TOKEN`
-- `HUBSPOT_CREATE_DEAL`
-- `CRM_WEBHOOK_URL`
+This static GitHub Pages version does not require runtime environment variables.
 
 ## Notes
 
 - The logo is stored in `assets/logo.png`.
 - The demo pages live in `example/`.
-- The public domain is `obsidianstudios.online`.
+- The live domain can be switched to GitHub Pages after DNS is updated.
