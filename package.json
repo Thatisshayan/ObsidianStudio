@@ -1,15 +1,10 @@
-﻿{
+{
   "name": "obsidian-studio",
   "version": "1.0.0",
   "private": true,
-  "description": "Obsidian Studio - premium websites and landing pages for local service businesses.",
+  "description": "Obsidian Studio - premium static websites and demos for local service businesses.",
   "scripts": {
-    "dev": "netlify dev",
+    "dev": "node scripts/dev-server.mjs",
     "build": "echo 'Static site - no build step required.'"
-  },
-  "dependencies": {
-    "resend": "^4.0.1",
-    "@hubspot/api-client": "^12.0.1"
   }
 }
-
