@@ -1,780 +1,435 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Obsidian Studio | Premium Websites &amp; Landing Pages</title>
-<meta name="description" content="Premium websites, landing pages, redesigns, booking pages, and CRM-ready lead forms for local service businesses." />
-<meta name="theme-color" content="#050505" />
-<link rel="canonical" href="/" />
-<link rel="icon" type="image/png" href="assets/logo.png" />
-
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Obsidian Studio | Premium Websites &amp; Landing Pages" />
-<meta property="og:description" content="Design that looks expensive. Pages that sell. Premium websites for local service businesses." />
-<meta property="og:image" content="assets/logo.png" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Obsidian Studio" />
-<meta name="twitter:description" content="Premium websites & landing pages for local service businesses." />
-<meta name="twitter:image" content="assets/logo.png" />
-
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"ProfessionalService",
-  "name":"Obsidian Studio",
-  "description":"Premium websites and landing pages for local service businesses.",
-  "email":"hello@obsidianstudios.online",
-  "url":"https://obsidianstudios.online",
-  "image":"assets/logo.png",
-  "priceRange":"$$"
-}
-</script>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Obsidian Studios — Websites Built for the Business You Actually Run</title>
+<meta name="description" content="Obsidian Studios designs and builds fully custom websites for small and local businesses — no templates, no generic AI look. Real brand systems, real results.">
+<meta property="og:title" content="Obsidian Studios">
+<meta property="og:description" content="Websites built for the business you actually run — fully custom, no templates.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#12151a">
+<link rel="icon" href="assets/favicon.png">
 <style>
-:root{
-  --black:#050505; --black-2:#0a0a0b; --obsidian:#101012; --graphite:#16161a;
-  --panel:rgba(255,255,255,.04); --panel-2:rgba(255,255,255,.07);
-  --line:rgba(230,232,235,.10); --line-2:rgba(230,232,235,.22);
-  --text:#f4f4f2; --muted:#a8a8a4; --soft:#7b7b78;
-  --silver:#d8dadd; --chrome:#f7f7f4; --steel:#9fb0bd;
-  --chrome-grad:linear-gradient(180deg,#f7f7f4 0%,#bdbfc2 45%,#7a7c80 55%,#cfd1d4 100%);
-  --silver-grad:linear-gradient(120deg,#e9ebee 0%,#9da0a5 45%,#f3f4f6 100%);
-  --r:22px; --r-sm:14px; --r-lg:32px;
-  --shadow:0 30px 100px rgba(0,0,0,.55);
-  --max:1200px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family:Manrope,Inter,system-ui,sans-serif;
-  color:var(--text);
-  background:
-    radial-gradient(1000px 600px at 15% 0%,rgba(159,176,189,.10),transparent 60%),
-    radial-gradient(900px 600px at 85% 20%,rgba(216,218,221,.06),transparent 60%),
-    radial-gradient(700px 500px at 50% 100%,rgba(255,255,255,.04),transparent 60%),
-    linear-gradient(180deg,#030303 0%,#0a0a0c 50%,#040404 100%);
-  -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
-  line-height:1.55;
-}
-body::before{
-  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
-  background:
-    linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
-  background-size:60px 60px;
-  mask-image:linear-gradient(to bottom,rgba(0,0,0,.6),transparent 75%);
-}
-body::after{
-  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-  opacity:.55;mix-blend-mode:overlay;
-}
-main,nav,section,footer{position:relative;z-index:1}
-.container{max-width:var(--max);margin:0 auto;padding:0 28px}
+  :root {
+    --bg: #12151a;
+    --surface: #1c212a;
+    --surface-raised: #232a35;
+    --line: #2c333f;
+    --ink: #e7e6ea;
+    --ink-soft: #a3a5ad;
+    --ink-faint: #6b6e77;
+    --navy: #24303c;
+    --slate: #90909c;
+    --gold: #cc9c24;
+    --gold-bright: #e0b64a;
+    --mono: ui-monospace, "SF Mono", "Cascadia Mono", Consolas, monospace;
+    --sans: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  }
 
-/* Typography */
-h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;letter-spacing:.5px;line-height:1.1;margin:0}
-h1{font-size:clamp(44px,6.4vw,80px)}
-h2{font-size:clamp(32px,4vw,52px)}
-h3{font-size:clamp(20px,2vw,24px);font-weight:500}
-.eyebrow{font-family:Manrope,sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--soft);font-weight:600}
-.chrome-text{background:var(--silver-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-p.lead{font-size:18px;color:var(--muted);max-width:60ch}
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
 
-/* Nav */
-.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);background:rgba(5,5,5,.62);border-bottom:1px solid var(--line)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;max-width:var(--max);margin:0 auto;padding:0 28px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
-.brand img{height:34px;width:auto;filter:drop-shadow(0 0 12px rgba(216,218,221,.15))}
-.brand-name{font-family:"Cormorant Garamond",serif;font-size:20px;letter-spacing:4px;text-transform:uppercase}
-.nav-links{display:flex;gap:32px;align-items:center}
-.nav-links a{color:var(--muted);text-decoration:none;font-size:13.5px;letter-spacing:.5px;transition:color .25s}
-.nav-links a:hover{color:var(--chrome)}
-.nav-cta{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;font-size:13px;letter-spacing:.5px;font-weight:500;text-decoration:none;background:var(--chrome-grad);color:#101013;border:1px solid rgba(255,255,255,.4);box-shadow:0 8px 28px rgba(216,218,221,.18),inset 0 1px 0 rgba(255,255,255,.6);transition:transform .25s ease,box-shadow .25s ease}
-.nav-cta:hover{transform:translateY(-1px);box-shadow:0 14px 36px rgba(216,218,221,.28),inset 0 1px 0 rgba(255,255,255,.7)}
-.nav-toggle{display:none;background:none;border:1px solid var(--line-2);color:var(--text);width:42px;height:42px;border-radius:12px;cursor:pointer;align-items:center;justify-content:center}
-@media(max-width:900px){
-  .nav-links{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;background:rgba(5,5,5,.96);padding:24px;border-bottom:1px solid var(--line);gap:18px}
-  .nav-links.open{display:flex}
-  .nav-toggle{display:inline-flex}
-  .nav-cta{display:none}
-  .nav-links .nav-cta{display:inline-flex;align-self:flex-start;margin-top:8px}
-}
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
 
-/* Buttons */
-.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-size:14px;letter-spacing:.4px;font-weight:500;text-decoration:none;cursor:pointer;border:none;transition:transform .25s,box-shadow .25s,background .25s}
-.btn-primary{background:var(--chrome-grad);color:#0a0a0b;border:1px solid rgba(255,255,255,.4);box-shadow:0 14px 40px rgba(216,218,221,.22),inset 0 1px 0 rgba(255,255,255,.6)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 22px 56px rgba(216,218,221,.30),inset 0 1px 0 rgba(255,255,255,.7)}
-.btn-ghost{background:rgba(255,255,255,.04);color:var(--text);border:1px solid var(--line-2);backdrop-filter:blur(8px)}
-.btn-ghost:hover{background:rgba(255,255,255,.08);border-color:var(--chrome);transform:translateY(-2px)}
-.btn-text{background:none;color:var(--muted);padding:10px 0;border-bottom:1px solid var(--line-2);border-radius:0}
-.btn-text:hover{color:var(--chrome);border-color:var(--chrome)}
+  a { color: inherit; }
 
-/* Hero */
-.hero{padding:80px 0 120px;text-align:center;position:relative}
-.hero-logo{width:96px;height:auto;margin:0 auto 28px;display:block;filter:drop-shadow(0 0 30px rgba(216,218,221,.18))}
-.hero h1{max-width:14ch;margin:0 auto 24px}
-.hero h1 em{font-style:italic;color:var(--silver)}
-.hero-sub{max-width:62ch;margin:0 auto 36px;font-size:18px;color:var(--muted)}
-.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:32px}
-.trust-chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:24px auto 0;max-width:760px}
-.chip{font-size:11.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--soft);padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:var(--panel)}
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 1.5rem; }
 
-/* Reel */
-.reel-wrap{margin:64px auto 0;max-width:1080px;padding:0 28px}
-.reel{position:relative;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line-2);background:linear-gradient(180deg,#0d0d10,#050506);box-shadow:var(--shadow);aspect-ratio:16/9}
-.reel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.reel-mock{position:absolute;inset:0;background:linear-gradient(135deg,#0e0e10,#16161a);display:flex;align-items:center;justify-content:center;overflow:hidden}
-.reel-mock::before{content:"";position:absolute;inset:-50%;background:conic-gradient(from 0deg,transparent,rgba(216,218,221,.06),transparent 30%,rgba(159,176,189,.05),transparent 60%);animation:rotate 18s linear infinite}
-.reel-mock::after{content:"";position:absolute;inset:1px;border-radius:inherit;background:linear-gradient(180deg,rgba(10,10,11,.92),rgba(10,10,11,.85))}
-@keyframes rotate{to{transform:rotate(360deg)}}
-.reel-slides{position:relative;z-index:2;width:78%;height:78%;display:grid;place-items:center}
-.slide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;animation:slideShow 16s infinite}
-.slide:nth-child(1){animation-delay:0s}
-.slide:nth-child(2){animation-delay:4s}
-.slide:nth-child(3){animation-delay:8s}
-.slide:nth-child(4){animation-delay:12s}
-@keyframes slideShow{0%,2%{opacity:0;transform:translateY(12px) scale(.98)}5%,23%{opacity:1;transform:translateY(0) scale(1)}26%,100%{opacity:0;transform:translateY(-12px) scale(1.02)}}
-.mockcard{width:100%;height:100%;border-radius:14px;background:linear-gradient(180deg,#fafafa,#e9e9e9);box-shadow:0 30px 80px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.8);overflow:hidden;display:flex;flex-direction:column}
-.mockcard.dark{background:linear-gradient(180deg,#0e0e10,#1a1a1d);color:#eaeaea;box-shadow:0 30px 80px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.08)}
-.mockbar{display:flex;gap:6px;padding:10px 14px;border-bottom:1px solid rgba(0,0,0,.08)}
-.mockcard.dark .mockbar{border-bottom-color:rgba(255,255,255,.08)}
-.dot{width:10px;height:10px;border-radius:50%;background:#d4d4d4}
-.dot:nth-child(2){background:#dcdcdc}.dot:nth-child(3){background:#e4e4e4}
-.mockbody{flex:1;padding:18px;display:flex;flex-direction:column;gap:10px;color:#222;font-family:Manrope}
-.mockcard.dark .mockbody{color:#ddd}
-.mockh{font-family:"Cormorant Garamond",serif;font-size:22px;line-height:1.1}
-.mockp{font-size:11px;color:#777}
-.mockcard.dark .mockp{color:#999}
-.mockrow{display:flex;gap:8px;margin-top:auto}
-.mockbtn{padding:6px 12px;border-radius:8px;font-size:10px;font-weight:600;background:#111;color:#fff}
-.mockcard.dark .mockbtn{background:#fafafa;color:#111}
-.mockgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:6px}
-.mockgrid div{height:36px;background:#e8e8e8;border-radius:6px}
-.mockcard.dark .mockgrid div{background:#26262a}
-.reel-caption{position:absolute;left:24px;bottom:20px;z-index:3;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--soft)}
-.reel-caption strong{color:var(--chrome);font-weight:500;letter-spacing:2.5px}
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--gold-bright);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+  }
+  .eyebrow::before { content: ""; width: 22px; height: 1px; background: var(--gold); display: inline-block; }
 
-/* Sections */
-section.s{padding:120px 0;position:relative}
-.s-head{max-width:680px;margin:0 auto 64px;text-align:center}
-.s-head .eyebrow{display:block;margin-bottom:16px}
-.s-head p{color:var(--muted);font-size:17px;margin-top:18px}
+  h1, h2, h3 {
+    font-family: var(--sans);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    line-height: 1.15;
+    text-wrap: balance;
+    margin: 0;
+  }
 
-.grid{display:grid;gap:20px}
-.grid-2{grid-template-columns:repeat(2,1fr)}
-.grid-3{grid-template-columns:repeat(3,1fr)}
-@media(max-width:900px){.grid-2,.grid-3{grid-template-columns:1fr}}
+  h1 { font-size: clamp(2.1rem, 6vw, 3.6rem); letter-spacing: 0.02em; }
+  h2 { font-size: clamp(1.5rem, 3.6vw, 2.1rem); }
+  h3 { font-size: clamp(1.05rem, 2vw, 1.25rem); letter-spacing: 0.04em; }
 
-.card{position:relative;padding:32px;border-radius:var(--r);background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));border:1px solid var(--line);backdrop-filter:blur(8px);transition:border-color .3s,transform .3s,background .3s}
-.card:hover{border-color:var(--line-2);transform:translateY(-4px);background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.025))}
-.card h3{margin-bottom:12px}
-.card p{color:var(--muted);font-size:15px;margin:0}
-.card .num{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;border:1px solid var(--line-2);font-family:"Cormorant Garamond",serif;font-size:18px;color:var(--silver);margin-bottom:18px}
+  p { color: var(--ink-soft); font-size: 1rem; margin: 0; }
+  p.lede { font-size: 1.08rem; max-width: 52ch; }
 
-/* Pain split */
-.pain-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
-@media(max-width:900px){.pain-grid{grid-template-columns:1fr}}
-.pain-list{display:flex;flex-direction:column;gap:14px}
-.pain-item{padding:18px 22px;border-radius:var(--r-sm);background:var(--panel);border:1px solid var(--line);display:flex;gap:14px;align-items:flex-start}
-.pain-item .x{flex:none;width:26px;height:26px;border-radius:50%;background:rgba(255,157,157,.08);color:#ff9d9d;display:grid;place-items:center;font-size:14px;border:1px solid rgba(255,157,157,.2)}
-.pain-item div{font-size:15px;color:var(--text)}
+  /* ---------- Nav ---------- */
+  header.nav {
+    position: sticky; top: 0; z-index: 40;
+    background: rgba(18,21,26,0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0.9rem 0;
+  }
+  .brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+  .brand img { height: 22px; width: auto; display: block; }
+  .navlinks { display: flex; align-items: center; gap: 2rem; }
+  .navlinks a {
+    text-decoration: none; color: var(--ink-soft); font-size: 0.85rem;
+    text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500;
+    transition: color 0.2s var(--ease);
+  }
+  .navlinks a:hover { color: var(--ink); }
+  .navlinks { display: none; }
+  @media (min-width: 760px) { .navlinks.links-only { display: flex; } }
 
-/* Mock website cards */
-.mocks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-@media(max-width:900px){.mocks{grid-template-columns:1fr}}
-.mockcardlg{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--obsidian);transition:transform .3s,border-color .3s;display:flex;flex-direction:column}
-.mockcardlg:hover{transform:translateY(-6px);border-color:var(--line-2)}
-.mockpreview{aspect-ratio:16/10;background:linear-gradient(135deg,#1a1a1d,#0a0a0b);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:18px}
-.mockpreview .mockcard{width:88%;height:84%}
-.mockmeta{padding:24px 26px;display:flex;flex-direction:column;gap:8px}
-.mockmeta .eyebrow{color:var(--silver)}
-.mockmeta h3{margin:4px 0}
-.mockmeta p{color:var(--muted);font-size:14px;margin:0 0 14px}
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;
+    text-decoration: none;
+    padding: 0.7rem 1.3rem;
+    border-radius: 2px;
+    transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease), background 0.2s var(--ease);
+  }
+  .btn-primary { background: var(--gold); color: #16130a; }
+  .btn-primary:hover { background: var(--gold-bright); box-shadow: 0 0 0 1px var(--gold-bright); }
+  .btn-primary:active { transform: scale(0.97); }
+  .btn-ghost { border: 1px solid var(--line); color: var(--ink); }
+  .btn-ghost:hover { border-color: var(--gold); color: var(--gold-bright); }
+  .btn-ghost:active { transform: scale(0.97); }
 
-/* Pricing */
-.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-@media(max-width:900px){.pricing{grid-template-columns:1fr}}
-.price{padding:36px 30px;border-radius:var(--r);background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));border:1px solid var(--line);display:flex;flex-direction:column;gap:18px;position:relative}
-.price.best{background:linear-gradient(180deg,rgba(216,218,221,.10),rgba(216,218,221,.02));border:1px solid var(--line-2);box-shadow:0 30px 80px rgba(0,0,0,.5)}
-.price .tag{position:absolute;top:-12px;left:30px;background:var(--chrome-grad);color:#0a0a0b;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;padding:6px 14px;border-radius:999px}
-.price h3{font-size:24px}
-.amount{font-family:"Cormorant Garamond",serif;font-size:48px;color:var(--chrome)}
-.amount small{font-size:14px;color:var(--soft);font-family:Manrope;margin-left:6px;letter-spacing:1px}
-.price ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
-.price li{padding-left:24px;position:relative;color:var(--muted);font-size:14.5px}
-.price li::before{content:"";position:absolute;left:0;top:9px;width:10px;height:1px;background:var(--silver)}
+  /* ---------- Facet system ---------- */
+  .facet-field {
+    position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0;
+  }
+  .facet {
+    position: absolute;
+    width: 640px; height: 640px;
+    right: -180px; top: -160px;
+    opacity: 0.14;
+  }
+  .facet span { position: absolute; inset: 0; }
+  .facet .f1 { background: var(--navy); clip-path: polygon(50% 0%, 50% 55%, 0% 40%); }
+  .facet .f2 { background: var(--slate); clip-path: polygon(50% 0%, 50% 55%, 100% 40%); }
+  .facet .f3 { background: var(--gold); clip-path: polygon(0% 40%, 50% 55%, 50% 100%); }
+  .facet .f4 { background: var(--ink); clip-path: polygon(100% 40%, 50% 55%, 50% 100%); opacity: 0.5; }
 
-/* Comparison */
-.compare{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--obsidian)}
-.compare-row{display:grid;grid-template-columns:1.4fr 1fr 1fr;border-top:1px solid var(--line);padding:18px 24px;font-size:14.5px;align-items:center}
-.compare-row:first-child{border-top:none;background:rgba(255,255,255,.03);color:var(--soft);font-size:11.5px;letter-spacing:2px;text-transform:uppercase}
-.compare-row > div + div{border-left:1px solid var(--line);padding-left:20px;color:var(--muted)}
-.compare-row > div:nth-child(3){color:var(--text)}
-@media(max-width:700px){.compare-row{grid-template-columns:1fr;gap:6px;padding:14px 18px}.compare-row > div + div{border-left:none;padding-left:0}}
+  .corner-facet {
+    position: absolute; top: 0; right: 0;
+    width: 0; height: 0;
+    border-style: solid;
+    border-width: 0 34px 34px 0;
+    border-color: transparent var(--gold) transparent transparent;
+    opacity: 0.85;
+    transition: transform 0.25s var(--ease), border-width 0.25s var(--ease);
+  }
 
-/* FAQ */
-.faq{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
-details.q{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-sm);overflow:hidden;transition:border-color .25s}
-details.q[open]{border-color:var(--line-2);background:var(--panel-2)}
-details.q summary{cursor:pointer;padding:20px 24px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;font-weight:500;font-size:15px}
-details.q summary::-webkit-details-marker{display:none}
-details.q summary::after{content:"+";font-family:"Cormorant Garamond",serif;font-size:24px;color:var(--silver);transition:transform .25s}
-details.q[open] summary::after{transform:rotate(45deg)}
-details.q .a{padding:0 24px 22px;color:var(--muted);font-size:15px}
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    padding: 6.5rem 0 5rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 640px; }
+  .hero h1 { margin-bottom: 1.25rem; }
+  .hero p.lede { margin-bottom: 2rem; }
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
 
-/* Contact */
-.contact-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:start}
-@media(max-width:900px){.contact-wrap{grid-template-columns:1fr}}
-.contact-side h2{margin-bottom:18px}
-.contact-side p{color:var(--muted);margin-bottom:24px}
-.contact-side .info{display:flex;flex-direction:column;gap:14px;margin-top:32px}
-.contact-side .info div{font-size:14px;color:var(--muted)}
-.contact-side .info strong{display:block;color:var(--silver);font-weight:500;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
-form.contact{padding:36px;border-radius:var(--r);background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));border:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:16px}
-form.contact .full{grid-column:1/-1}
-form.contact label{display:flex;flex-direction:column;gap:6px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--soft);font-weight:600}
-form.contact input,form.contact select,form.contact textarea{font-family:inherit;font-size:15px;padding:13px 14px;border-radius:10px;background:rgba(0,0,0,.35);border:1px solid var(--line-2);color:var(--text);outline:none;transition:border-color .2s,background .2s}
-form.contact input:focus,form.contact select:focus,form.contact textarea:focus{border-color:var(--chrome);background:rgba(0,0,0,.5)}
-form.contact textarea{min-height:130px;resize:vertical}
-.hp{position:absolute;left:-10000px;opacity:0;pointer-events:none;height:0;width:0}
-.consent{font-size:12.5px;color:var(--soft);line-height:1.5}
-.form-status{font-size:14px;padding:14px 16px;border-radius:10px;display:none}
-.form-status.show{display:block}
-.form-status.success{background:rgba(158,230,193,.08);border:1px solid rgba(158,230,193,.3);color:#9ee6c1}
-.form-status.error{background:rgba(255,157,157,.08);border:1px solid rgba(255,157,157,.3);color:#ff9d9d}
-button[type=submit]{justify-self:start}
-button[type=submit]:disabled{opacity:.6;cursor:wait}
+  /* ---------- Sections ---------- */
+  section { padding: 5rem 0; border-bottom: 1px solid var(--line); }
+  section:last-of-type { border-bottom: none; }
+  .section-head { margin-bottom: 2.5rem; max-width: 60ch; }
 
-/* Booking */
-.booking{padding:48px;border-radius:var(--r);background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.01));border:1px solid var(--line);text-align:center}
-.booking h3{margin-bottom:12px}
-.booking p{color:var(--muted);margin-bottom:24px;max-width:60ch;margin-left:auto;margin-right:auto}
+  /* ---------- Services ---------- */
+  .services {
+    display: grid; gap: 1.25rem;
+    grid-template-columns: 1.15fr 1fr 1fr;
+  }
+  @media (max-width: 820px) { .services { grid-template-columns: 1fr; } }
+  .service-card {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    padding: 1.75rem 1.6rem;
+    overflow: hidden;
+    transition: transform 0.25s var(--ease), border-color 0.25s var(--ease);
+  }
+  .service-card:hover { transform: translateY(-3px); border-color: var(--gold); }
+  .service-card:hover .corner-facet { border-width: 0 44px 44px 0; }
+  .service-card .num { font-family: var(--mono); font-size: 0.75rem; color: var(--gold-bright); display: block; margin-bottom: 0.6rem; }
+  .service-card h3 { margin-bottom: 0.6rem; }
+  .service-card p { font-size: 0.92rem; }
 
-/* Footer */
-footer{padding:60px 0 40px;border-top:1px solid var(--line);margin-top:40px}
-.foot{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
-.foot p{margin:0;color:var(--soft);font-size:13px}
-.foot a{color:var(--muted);text-decoration:none;font-size:13px}
-.foot a:hover{color:var(--chrome)}
+  /* ---------- Process ---------- */
+  .process-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+  .process-list li {
+    display: grid; grid-template-columns: 70px 1fr; gap: 1.5rem;
+    padding: 1.6rem 0; border-top: 1px solid var(--line);
+  }
+  .process-list li:first-child { border-top: none; }
+  .process-list .step-num {
+    font-family: var(--mono); font-size: 1.6rem; color: var(--ink-faint); font-variant-numeric: tabular-nums;
+  }
+  .process-list h3 { margin-bottom: 0.4rem; }
+  .process-list p { font-size: 0.92rem; max-width: 56ch; }
 
-/* Reveal */
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
-.reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion: reduce){
-  .reveal{opacity:1;transform:none;transition:none}
-  .reel-mock::before,.slide{animation:none}
-  .slide:nth-child(1){opacity:1}
-  .slide:nth-child(n+2){display:none}
-  html{scroll-behavior:auto}
-}
+  /* ---------- Portfolio ---------- */
+  .case {
+    position: relative;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem;
+    align-items: center;
+    padding: 2.5rem 0;
+    border-top: 1px solid var(--line);
+  }
+  .case:first-of-type { border-top: none; }
+  @media (max-width: 760px) { .case { grid-template-columns: 1fr; } }
+  .case .tag { font-family: var(--mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-faint); margin-bottom: 0.6rem; display: block; }
+  .case h3 { font-size: clamp(1.3rem, 2.6vw, 1.7rem); margin-bottom: 0.6rem; }
+  .case p { margin-bottom: 1.1rem; }
+  .case a.visit { font-size: 0.85rem; font-weight: 600; text-decoration: none; color: var(--gold-bright); text-transform: uppercase; letter-spacing: 0.06em; }
+  .case a.visit:hover { text-decoration: underline; }
+  .case-visual {
+    position: relative;
+    aspect-ratio: 4/3;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--mono); font-size: 0.75rem; color: var(--ink-faint);
+    text-align: center; padding: 1.5rem;
+  }
+
+  .media-nod {
+    margin-top: 2rem;
+    border: 1px dashed var(--line);
+    padding: 1.4rem 1.6rem;
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .media-nod p { font-size: 0.9rem; }
+  .media-nod strong { color: var(--ink); }
+
+  /* ---------- Contact ---------- */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+  @media (max-width: 760px) { .contact-grid { grid-template-columns: 1fr; } }
+  .contact-card {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    padding: 2rem;
+  }
+  .contact-card .row { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 1.3rem; }
+  .contact-card .row:last-child { margin-bottom: 0; }
+  .contact-card .label { font-family: var(--mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-faint); }
+  .contact-card .value { font-size: 1rem; }
+  .contact-card .value a { text-decoration: none; color: var(--gold-bright); }
+  .contact-card .value a:hover { text-decoration: underline; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    padding: 2.5rem 0;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  footer .brand img { height: 18px; }
+  footer .fine { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-faint); }
+  .social { display: flex; gap: 0.9rem; }
+  .social a[aria-disabled="true"] { color: var(--ink-faint); pointer-events: none; opacity: 0.5; }
+
+  /* ---------- Reveal ---------- */
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.5s var(--ease), transform 0.5s var(--ease); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    .reveal { opacity: 1 !important; transform: none !important; }
+  }
 </style>
 </head>
 <body>
 
-<nav class="nav" aria-label="Primary">
-  <div class="nav-inner">
-    <a href="/" class="brand" aria-label="Obsidian Studio home">
-      <img src="assets/logo.png" alt="Obsidian Studio logo" />
-      <span class="brand-name">Obsidian</span>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <img src="assets/logo-lockup.png" alt="Obsidian Studios">
     </a>
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="document.getElementById('navlinks').classList.toggle('open');this.setAttribute('aria-expanded',document.getElementById('navlinks').classList.contains('open'))">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-    </button>
-    <div class="nav-links" id="navlinks">
-      <a href="#services">Services</a>
-      <a href="#mocks">Mock Websites</a>
+    <nav class="navlinks links-only">
+      <a href="#work">Work</a>
       <a href="#process">Process</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
-      <a href="#contact" class="nav-cta">Request Free Preview</a>
-    </div>
-  </div>
-</nav>
-
-<main>
-
-<!-- HERO -->
-<header class="hero">
-  <div class="container">
-    <img src="assets/logo.png" alt="Obsidian Studio" class="hero-logo reveal" />
-    <h1 class="reveal">Design that looks expensive.<br/><em class="chrome-text">Pages that sell.</em></h1>
-    <p class="hero-sub reveal">Premium websites and landing pages built for local service businesses that need more calls, bookings, quote requests, and trust.</p>
-    <div class="hero-ctas reveal">
-      <a href="#contact" class="btn btn-primary">Request a Free Preview â†’</a>
-      <a href="#mocks" class="btn btn-ghost">View Mock Websites</a>
-      <a href="#booking" class="btn btn-text">Book a Website Call</a>
-    </div>
-    <div class="trust-chips reveal">
-      <span class="chip">Landing Pages</span>
-      <span class="chip">Website Redesigns</span>
-      <span class="chip">Booking Pages</span>
-      <span class="chip">CRM-Ready Forms</span>
-      <span class="chip">Mobile Responsive</span>
-    </div>
-  </div>
-
-  <!-- Cinematic reel -->
-  <div class="reel-wrap reveal">
-    <div class="reel" aria-label="Obsidian Studio showreel">
-      <!-- Drop real files here and remove `hidden` -->
-      <video hidden autoplay muted loop playsinline preload="metadata"
-             poster="assets/video/obsidian-reel-poster.jpg">
-        <source src="assets/video/obsidian-reel.webm" type="video/webm" />
-        <source src="assets/video/obsidian-reel.mp4" type="video/mp4" />
-      </video>
-      <div class="reel-mock" aria-hidden="true">
-        <div class="reel-slides">
-          <div class="slide">
-            <div class="mockcard">
-              <div class="mockbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-              <div class="mockbody">
-                <div class="mockh">Northbridge Renovations</div>
-                <div class="mockp">Kitchens Â· Basements Â· Additions</div>
-                <div class="mockgrid"><div></div><div></div><div></div></div>
-                <div class="mockrow"><span class="mockbtn">Request a Quote</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="mockcard dark">
-              <div class="mockbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-              <div class="mockbody">
-                <div class="mockh">Edge &amp; Blade Barber Co.</div>
-                <div class="mockp">Book your chair Â· Open today till 8pm</div>
-                <div class="mockgrid"><div></div><div></div><div></div></div>
-                <div class="mockrow"><span class="mockbtn">Book Now</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="mockcard">
-              <div class="mockbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-              <div class="mockbody">
-                <div class="mockh">M. CarriÃ¨re Â· Realtor</div>
-                <div class="mockp">Buying Â· Selling Â· Strategy Calls</div>
-                <div class="mockgrid"><div></div><div></div><div></div></div>
-                <div class="mockrow"><span class="mockbtn">Book Consultation</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="mockcard dark" style="display:flex;align-items:center;justify-content:center">
-              <div style="text-align:center">
-                <img src="assets/logo.png" alt="" style="width:80px;opacity:.95;filter:drop-shadow(0 0 20px rgba(216,218,221,.25))"/>
-                <div style="font-family:'Cormorant Garamond',serif;font-size:18px;letter-spacing:6px;margin-top:14px;color:#d8dadd">OBSIDIAN STUDIO</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="reel-caption"><strong>Showreel</strong> Â· selected work in motion</div>
-    </div>
+    </nav>
+    <a class="btn btn-primary" href="#contact">Book a Call</a>
   </div>
 </header>
 
-<!-- PAIN -->
-<section class="s" id="why">
-  <div class="container">
-    <div class="s-head reveal">
-      <span class="eyebrow">The Problem</span>
-      <h2>What a weak website costs you.</h2>
-      <p>Local businesses lose calls, bookings and trust every week because the website doesn't match the quality of the work.</p>
+<main id="top">
+
+  <section class="hero">
+    <div class="facet-field" aria-hidden="true">
+      <div class="facet"><span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span></div>
     </div>
-    <div class="pain-grid">
-      <div class="pain-list reveal">
-        <div class="pain-item"><span class="x">âœ•</span><div>Outdated websites quietly erode trust before anyone calls.</div></div>
-        <div class="pain-item"><span class="x">âœ•</span><div>Instagram alone isn't a business â€” people search before they book.</div></div>
-        <div class="pain-item"><span class="x">âœ•</span><div>Broken contact forms lose leads you never even hear about.</div></div>
-        <div class="pain-item"><span class="x">âœ•</span><div>Poor mobile design kills conversions where 70% of visitors actually are.</div></div>
-        <div class="pain-item"><span class="x">âœ•</span><div>No clear booking or quote button means missed revenue every day.</div></div>
-        <div class="pain-item"><span class="x">âœ•</span><div>Generic templates make a serious business look forgettable.</div></div>
-      </div>
-      <div class="card reveal" style="padding:36px">
-        <span class="eyebrow">The Fix</span>
-        <h3 style="margin:14px 0 14px">A site that earns the click and the call.</h3>
-        <p>Obsidian Studio designs premium, conversion-focused pages with a clear path from visit to lead â€” mobile-first, fast, on-brand, and ready to plug into your email or CRM the day it launches.</p>
+    <div class="wrap hero-content">
+      <div class="eyebrow reveal">Web Design Studio</div>
+      <h1 class="reveal">Websites Built for the Business You Actually Run</h1>
+      <p class="lede reveal">Not a template with your logo dropped in. Obsidian Studios designs and builds fully custom websites for small and local businesses — the kind that actually get picked up on Google, and actually get people to call.</p>
+      <div class="hero-ctas reveal">
+        <a class="btn btn-primary" href="#contact">Book a Call</a>
+        <a class="btn btn-ghost" href="#work">See the Work</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SOLUTION / SERVICES -->
-<section class="s" id="services">
-  <div class="container">
-    <div class="s-head reveal">
-      <span class="eyebrow">What We Build</span>
-      <h2>Services tuned for local conversion.</h2>
-      <p>Every page is structured around one outcome: the next call, booking, or quote request.</p>
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">What We Build</div>
+        <h2>Three ways we work with you</h2>
+      </div>
+      <div class="services">
+        <div class="service-card reveal">
+          <div class="corner-facet"></div>
+          <span class="num">01</span>
+          <h3>Custom Website Design &amp; Build</h3>
+          <p>A site designed around your business specifically — your brand, your customers, your market — built to load fast and rank on Google from day one.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="corner-facet"></div>
+          <span class="num">02</span>
+          <h3>Brand-Matched Visual Systems</h3>
+          <p>Color, type, and layout decisions grounded in your actual brand — not a generic template default. If you don't have a brand system yet, we build one first.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="corner-facet"></div>
+          <span class="num">03</span>
+          <h3>Ongoing Care &amp; Growth</h3>
+          <p>Post-launch support, content updates, and the option to add booking, e-commerce, or lead-gen tools as your business grows.</p>
+        </div>
+      </div>
     </div>
-    <div class="grid grid-3">
-      <div class="card reveal"><h3>Landing Pages</h3><p>Single-page conversion engines for ads, promos, and high-intent traffic.</p></div>
-      <div class="card reveal"><h3>Business Websites</h3><p>Premium one-page sites that present a serious brand and capture leads cleanly.</p></div>
-      <div class="card reveal"><h3>Website Redesigns</h3><p>Modernize an outdated site without losing your existing search presence.</p></div>
-      <div class="card reveal"><h3>Booking Pages</h3><p>Mobile-first booking flow built around Calendly, Cal.com, or your own link.</p></div>
-      <div class="card reveal"><h3>Contractor Lead Pages</h3><p>Quote-request flow tuned for renovation, landscaping, and trades.</p></div>
-      <div class="card reveal"><h3>Realtor &amp; Broker Sites</h3><p>Premium personal-brand pages for realtors and mortgage advisors.</p></div>
-      <div class="card reveal"><h3>Salon &amp; Barber Booking</h3><p>Polished booking pages for studios that take appointments daily.</p></div>
-      <div class="card reveal"><h3>CRM &amp; Form Integration</h3><p>Email, HubSpot, or webhook routing so no lead ever sits in an inbox alone.</p></div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- MOCK WEBSITES -->
-<section class="s" id="mocks">
-  <div class="container">
-    <div class="s-head reveal">
-      <span class="eyebrow">Mock Websites</span>
-      <h2>Real demos. Open them.</h2>
-      <p>Each demo is a real, browsable page â€” not a screenshot. This is the level we deliver.</p>
+  <section id="process">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">How We Work</div>
+        <h2>Four steps, start to launch</h2>
+      </div>
+      <ul class="process-list">
+        <li class="reveal"><span class="step-num">01</span><div><h3>Discovery</h3><p>A short conversation about your business, your customers, and what a visitor should do the moment they land on your site.</p></div></li>
+        <li class="reveal"><span class="step-num">02</span><div><h3>Design</h3><p>A brand-specific design direction — real colors, real type, real layout decisions — before a single line of code is written.</p></div></li>
+        <li class="reveal"><span class="step-num">03</span><div><h3>Build</h3><p>The site gets built, tested on real devices, and checked against accessibility and performance standards.</p></div></li>
+        <li class="reveal"><span class="step-num">04</span><div><h3>Launch</h3><p>Your site goes live under your domain, with 30 days of support included to iron out anything that comes up.</p></div></li>
+      </ul>
     </div>
-    <div class="mocks">
+  </section>
 
-      <a class="mockcardlg reveal" href="examples/contractor.html">
-        <div class="mockpreview">
-          <div class="mockcard">
-            <div class="mockbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-            <div class="mockbody">
-              <div class="mockh">Northbridge Renovations</div>
-              <div class="mockp">Built to win quote requests.</div>
-              <div class="mockgrid"><div></div><div></div><div></div></div>
-            </div>
+  <section id="work">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Selected Work</div>
+        <h2>Two industries. Same standard.</h2>
+      </div>
+
+      <div class="case reveal">
+        <div>
+          <span class="tag">Premium Retail — Toronto</span>
+          <h3>Tooka Door Artisans</h3>
+          <p>A premium door hardware retailer and installation service. The site leads with craftsmanship — brass tones, close-up hardware photography, and a positioning line built around durability rather than a generic sales pitch.</p>
+          <a class="visit" href="https://tooka-door-artisans.lovable.app" target="_blank" rel="noopener">Visit the Site →</a>
+        </div>
+        <div class="case-visual">tooka-door-artisans.lovable.app</div>
+      </div>
+
+      <div class="case reveal">
+        <div>
+          <span class="tag">Artist Portfolio</span>
+          <h3>Donya Kavoosi</h3>
+          <p>A contemplative portfolio for a mixed-media artist, built around a visual archive of her work rather than a conventional "about/services/contact" structure — the format follows the subject.</p>
+          <a class="visit" href="https://donyakavoosi.art" target="_blank" rel="noopener">Visit the Site →</a>
+        </div>
+        <div class="case-visual">donyakavoosi.art</div>
+      </div>
+
+      <div class="media-nod reveal">
+        <p>Looking for content, video, or media work instead of a website? <strong>Obsidian Media</strong> is our sister brand for that.</p>
+        <a class="visit" href="https://obsidianmedia.online" target="_blank" rel="noopener">obsidianmedia.online →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Get Started</div>
+        <h2>Tell us about your business</h2>
+        <p class="lede">Book a short call, or reach out directly — either way, we'll follow up within one business day.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <div class="corner-facet"></div>
+          <div class="row">
+            <span class="label">Email</span>
+            <span class="value"><a href="mailto:hello@obsidianstudios.online">hello@obsidianstudios.online</a></span>
+          </div>
+          <div class="row">
+            <span class="label">Response Time</span>
+            <span class="value">Within 1 business day</span>
+          </div>
+          <div class="row">
+            <span class="label">Based In</span>
+            <span class="value">Ontario, Canada</span>
           </div>
         </div>
-        <div class="mockmeta">
-          <span class="eyebrow">Contractor / Renovation</span>
-          <h3>Northbridge Renovations</h3>
-          <p>Quote-request flow, project gallery, before/after layout.</p>
-          <span class="btn btn-ghost" style="align-self:flex-start">Open Demo â†’</span>
-        </div>
-      </a>
-
-      <a class="mockcardlg reveal" href="examples/barber.html">
-        <div class="mockpreview">
-          <div class="mockcard dark">
-            <div class="mockbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-            <div class="mockbody">
-              <div class="mockh">Edge &amp; Blade</div>
-              <div class="mockp">Booking-first barbershop page.</div>
-              <div class="mockgrid"><div></div><div></div><div></div></div>
-            </div>
-          </div>
-        </div>
-        <div class="mockmeta">
-          <span class="eyebrow">Barbershop</span>
-          <h3>Edge &amp; Blade Barber Co.</h3>
-          <p>Pricing menu, mobile booking CTA, hours and location.</p>
-          <span class="btn btn-ghost" style="align-self:flex-start">Open Demo â†’</span>
-        </div>
-      </a>
-
-      <a class="mockcardlg reveal" href="examples/realtor.html">
-        <div class="mockpreview">
-          <div class="mockcard">
-            <div class="mockbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-            <div class="mockbody">
-              <div class="mockh">M. CarriÃ¨re</div>
-              <div class="mockp">Premium advisor positioning.</div>
-              <div class="mockgrid"><div></div><div></div><div></div></div>
-            </div>
-          </div>
-        </div>
-        <div class="mockmeta">
-          <span class="eyebrow">Realtor / Advisor</span>
-          <h3>M. CarriÃ¨re, Realtor</h3>
-          <p>Buyer/seller service blocks, authority section, consultation CTA.</p>
-          <span class="btn btn-ghost" style="align-self:flex-start">Open Demo â†’</span>
-        </div>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="s" id="process">
-  <div class="container">
-    <div class="s-head reveal">
-      <span class="eyebrow">Process</span>
-      <h2>Five steps. No drama.</h2>
-    </div>
-    <div class="grid grid-3">
-      <div class="card reveal"><span class="num">1</span><h3>Submit your link</h3><p>Send your current site, Instagram, or Google profile.</p></div>
-      <div class="card reveal"><span class="num">2</span><h3>Receive a preview</h3><p>You get a direction tailored to your business and goals.</p></div>
-      <div class="card reveal"><span class="num">3</span><h3>Approve the package</h3><p>Pick Starter, Business, or Premium and confirm scope.</p></div>
-      <div class="card reveal"><span class="num">4</span><h3>Finalize the site</h3><p>One revision round to lock copy, photos, and brand details.</p></div>
-      <div class="card reveal"><span class="num">5</span><h3>Launch with leads on</h3><p>Email, form, and optional CRM are wired up the day you go live.</p></div>
-      <div class="card reveal" style="background:linear-gradient(180deg,rgba(216,218,221,.10),rgba(216,218,221,.02));border-color:var(--line-2)">
-        <span class="eyebrow chrome-text">Average turnaround</span>
-        <h3 style="margin:10px 0">Preview in 48â€“72 hours. Launch in 7â€“14 days.</h3>
-        <p>Faster is possible for landing pages and tight scopes.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- COMPARISON -->
-<section class="s" id="compare">
-  <div class="container">
-    <div class="s-head reveal">
-      <span class="eyebrow">The Difference</span>
-      <h2>Template website vs Obsidian Studio.</h2>
-    </div>
-    <div class="compare reveal">
-      <div class="compare-row"><div></div><div>Generic Template</div><div>Obsidian Studio</div></div>
-      <div class="compare-row"><div>Layout</div><div>Cookie-cutter, like everyone else</div><div>Custom direction, on-brand</div></div>
-      <div class="compare-row"><div>CTA strategy</div><div>Weak "Contact Us" buried in nav</div><div>Lead-focused CTA repeated by section</div></div>
-      <div class="compare-row"><div>Tracking</div><div>No tracking, no CRM</div><div>CRM-ready form, lead-source tracking</div></div>
-      <div class="compare-row"><div>Section flow</div><div>Random blocks of features</div><div>Pain â†’ solution â†’ proof â†’ CTA</div></div>
-      <div class="compare-row"><div>Mobile</div><div>Looks fine, converts poorly</div><div>Mobile-first, designed to tap</div></div>
-      <div class="compare-row"><div>Visual system</div><div>Stock fonts, default colors</div><div>Premium typography, brand palette</div></div>
-      <div class="compare-row"><div>Contact</div><div>Static email and phone number</div><div>Email handoff or external form</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="s" id="pricing">
-  <div class="container">
-    <div class="s-head reveal">
-      <span class="eyebrow">Pricing</span>
-      <h2>Premium work. Honest price.</h2>
-      <p>Launch pricing â€” locked when you start. No hidden fees, no monthly retainers required.</p>
-    </div>
-    <div class="pricing">
-      <div class="price reveal">
-        <h3>Starter Landing Page</h3>
-        <div class="amount">$249 <small>CAD launch</small></div>
-        <ul>
-          <li>One-page landing site</li>
-          <li>Mobile responsive layout</li>
-          <li>Services &amp; contact section</li>
-          <li>Call or booking CTA</li>
-          <li>Basic SEO title &amp; description</li>
-        </ul>
-        <a href="#contact" class="btn btn-ghost" style="align-self:flex-start;margin-top:auto">Choose Starter</a>
-      </div>
-      <div class="price best reveal">
-        <span class="tag">Best Value</span>
-        <h3>Business Website</h3>
-        <div class="amount">$475 <small>CAD starting</small></div>
-        <ul>
-          <li>Premium one-page website</li>
-          <li>Hero Â· services Â· proof Â· gallery</li>
-          <li>Quote / request form</li>
-          <li>Booking Â· Call Â· WhatsApp buttons</li>
-          <li>Launch support</li>
-        </ul>
-        <a href="#contact" class="btn btn-primary" style="align-self:flex-start;margin-top:auto">Choose Business</a>
-      </div>
-      <div class="price reveal">
-        <h3>Premium Multi-Page</h3>
-        <div class="amount">$900+ <small>CAD</small></div>
-        <ul>
-          <li>Home page + service pages</li>
-          <li>Gallery / portfolio structure</li>
-          <li>Stronger SEO layout</li>
-          <li>Advanced form + tracking-ready CTA</li>
-          <li>Built for contractors, clinics, serious brands</li>
-        </ul>
-        <a href="#contact" class="btn btn-ghost" style="align-self:flex-start;margin-top:auto">Choose Premium</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="s" id="faq">
-  <div class="container">
-    <div class="s-head reveal">
-      <span class="eyebrow">FAQ</span>
-      <h2>Answers, no fluff.</h2>
-    </div>
-    <div class="faq">
-      <details class="q reveal"><summary>How fast can I get a preview?</summary><div class="a">Usually within 48â€“72 hours of receiving your link and a short brief.</div></details>
-      <details class="q reveal"><summary>Can you redesign my current website?</summary><div class="a">Yes â€” redesigns are one of our core services. We can keep what's working and modernize the rest.</div></details>
-      <details class="q reveal"><summary>Can you connect my booking link?</summary><div class="a">Yes. Calendly, Cal.com, Square, Acuity, Setmore, Booksy â€” if it has a link or embed, we wire it in.</div></details>
-      <details class="q reveal"><summary>Can the form send to my email?</summary><div class="a">The form opens your email app with a prefilled message so you can review and send it directly.</div></details>
-      <details class="q reveal"><summary>Can this connect to HubSpot?</summary><div class="a">Yes. We support HubSpot CRM out of the box â€” contacts, notes, and optional deal creation are all available.</div></details>
-      <details class="q reveal"><summary>Do I need hosting or a domain already?</summary><div class="a">No. We handle hosting setup and walk you through domain connection. Existing hosting works too.</div></details>
-      <details class="q reveal"><summary>Is the launch price permanent?</summary><div class="a">The price you start at is locked. No surprise increases mid-project.</div></details>
-      <details class="q reveal"><summary>Can I start with one page and upgrade later?</summary><div class="a">Absolutely. Many clients start with Starter or Business and upgrade to Premium when they're ready.</div></details>
-      <details class="q reveal"><summary>Can you build a website for my exact industry?</summary><div class="a">If you serve local clients â€” contractors, salons, brokers, clinics, studios â€” we likely have a structure tuned for it.</div></details>
-      <details class="q reveal"><summary>Can you connect Calendly or Cal.com?</summary><div class="a">Yes, both. We can embed the booking widget directly or use a clean redirect â€” whichever converts better for your audience.</div></details>
-    </div>
-  </div>
-</section>
-
-<!-- BOOKING -->
-<section class="s" id="booking">
-  <div class="container">
-    <div class="booking reveal">
-      <span class="eyebrow">Optional</span>
-      <h3 style="margin-top:14px">Prefer to talk it through first?</h3>
-      <p>Book a short website call to walk through your goals, current site, and what would convert best for your business.</p>
-      <!-- Drop Cal.com / Calendly embed here when ready -->
-      <a href="#contact" class="btn btn-ghost">Book a Website Call</a>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="s" id="contact">
-  <div class="container">
-    <div class="contact-wrap">
-      <div class="contact-side reveal">
-        <span class="eyebrow">Request a Free Preview</span>
-        <h2 style="margin-top:14px">Tell us about your business.</h2>
-        <p>Send your link and a few details. You'll get a preview direction back within 48â€“72 hours â€” no pressure to buy.</p>
-        <div class="info">
-          <div><strong>Email</strong>hello@obsidianstudios.online</div>
-          <div><strong>Response time</strong>Same-day on business days</div>
-          <div><strong>Built for</strong>Contractors Â· Salons Â· Realtors Â· Clinics Â· Local services</div>
+        <div class="reveal">
+          <a class="btn btn-primary" href="mailto:hello@obsidianstudios.online?subject=New%20Project%20Inquiry" style="width:100%; justify-content:center; padding:1rem;">Book a Call</a>
+          <p style="margin-top:1rem; font-size:0.85rem;">No booking calendar connected yet — this opens an email to get the conversation started. <!-- TODO: replace with a real Calendly/Cal.com booking link once set up --></p>
         </div>
       </div>
-
-      <form class="contact reveal" id="contactForm" autocomplete="on" novalidate>
-        <label class="full">Full name *
-          <input type="text" name="name" required maxlength="120" />
-        </label>
-        <label>Email *
-          <input type="email" name="email" required maxlength="200" />
-        </label>
-        <label>Phone
-          <input type="tel" name="phone" maxlength="40" />
-        </label>
-        <label>Business name
-          <input type="text" name="business" maxlength="160" />
-        </label>
-        <label>Current website / Instagram / Google
-          <input type="text" name="link" maxlength="500" placeholder="https://..." />
-        </label>
-        <label>Package
-          <select name="package">
-            <option value="">Not sure yet</option>
-            <option value="starter">Starter Landing â€” $249 CAD</option>
-            <option value="business">Business Website â€” $475 CAD</option>
-            <option value="premium">Premium Multi-Page â€” $900+ CAD</option>
-          </select>
-        </label>
-        <label>Timeline
-          <select name="timeline">
-            <option value="">Flexible</option>
-            <option>ASAP</option>
-            <option>1â€“2 weeks</option>
-            <option>This month</option>
-            <option>Next month</option>
-          </select>
-        </label>
-        <label class="full">Project details *
-          <textarea name="details" required maxlength="4000" placeholder="What does your business do? What's the goal of the site?"></textarea>
-        </label>
-        <!-- Honeypot -->
-        <div class="hp" aria-hidden="true">
-          <label>Company website<input type="text" name="company_website" tabindex="-1" autocomplete="off" /></label>
-        </div>
-        <input type="hidden" name="source" value="obsidianstudios.online" />
-
-        <div class="full consent">
-          By submitting this form, you agree to be contacted about your website request. Your information is used only to respond to your inquiry.
-        </div>
-
-        <div class="full">
-          <button type="submit" class="btn btn-primary">Request a Free Preview â†’</button>
-        </div>
-
-        <div class="full form-status" id="formStatus" role="status" aria-live="polite"></div>
-      </form>
     </div>
-  </div>
-</section>
+  </section>
 
 </main>
 
-<footer>
-  <div class="container foot">
-    <div style="display:flex;align-items:center;gap:12px">
-      <img src="assets/logo.png" alt="" style="height:28px;width:auto;opacity:.85" />
-      <p>Â© <span id="yr"></span> Obsidian Studio Â· hello@obsidianstudios.online</p>
-    </div>
-    <div style="display:flex;gap:24px">
-      <a href="#contact">Request preview</a>
-      <a href="#mocks">Mock websites</a>
-      <a href="#" aria-disabled="true">Privacy Policy coming soon</a>
-    </div>
+<footer class="wrap">
+  <a class="brand" href="#top"><img src="assets/logo-lockup.png" alt="Obsidian Studios"></a>
+  <span class="fine">&copy; 2026 Obsidian Studios. All rights reserved.</span>
+  <!-- TODO: replace with real social URLs before launch -->
+  <div class="social">
+    <a href="#" aria-disabled="true" tabindex="-1" aria-label="Instagram (coming soon)">IG</a>
+    <a href="#" aria-disabled="true" tabindex="-1" aria-label="LinkedIn (coming soon)">LI</a>
   </div>
 </footer>
 
 <script>
-document.getElementById('yr').textContent = new Date().getFullYear();
-
-// Reveal on scroll
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-// Close mobile nav on click
-document.querySelectorAll('#navlinks a').forEach(a => a.addEventListener('click', () => {
-  document.getElementById('navlinks').classList.remove('open');
-}));
-
-// Form
-const form = document.getElementById('contactForm');
-const status = document.getElementById('formStatus');
-const fallbackMailto = 'mailto:hello@obsidianstudios.online?subject=' + encodeURIComponent('Obsidian Studio preview request') + '&body=' + encodeURIComponent('Please open the form and paste your details here.');
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  status.className = 'form-status'; status.textContent = '';
-
-  const fd = new FormData(form);
-  const data = Object.fromEntries(fd.entries());
-  if (!data.name || !data.email || !data.details) {
-    status.className = 'form-status show error';
-    status.textContent = 'Please fill in name, email, and project details.';
-    return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
   }
-
-  const btn = form.querySelector('button[type=submit]');
-  btn.disabled = true; const old = btn.textContent; btn.textContent = 'Sending…';
-
-  try {
-    const subject = encodeURIComponent('Preview request from ' + (data.business || data.name));
-    const body = encodeURIComponent([
-      'Name: ' + data.name,
-      'Email: ' + data.email,
-      'Phone: ' + (data.phone || ''),
-      'Business: ' + (data.business || ''),
-      'Link: ' + (data.link || ''),
-      'Package: ' + (data.package || ''),
-      'Timeline: ' + (data.timeline || ''),
-      '',
-      'Details:',
-      data.details,
-    ].join('\n'));
-    window.location.href = 'mailto:hello@obsidianstudios.online?subject=' + subject + '&body=' + body;
-    status.className = 'form-status show success';
-    status.textContent = 'Your email app should open with a prefilled message. If it does not, email hello@obsidianstudios.online directly.';
-    form.reset();
-  } catch (err) {
-    window.location.href = fallbackMailto;
-    status.className = 'form-status show error';
-    status.textContent = 'Your browser blocked the mail link. Please email hello@obsidianstudios.online directly.';
-  } finally {
-    btn.disabled = false; btn.textContent = old;
-  }
-});
 </script>
 
 </body>
 </html>
-
-
