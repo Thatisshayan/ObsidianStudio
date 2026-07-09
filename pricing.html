@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pricing — Obsidian Studio</title>
+<meta name="description" content="Three pricing tiers for stone shops and local service businesses. Starter Site ($450–$650), Growth Site ($1,200–$1,800), Pro Site ($2,800–$4,500). Founding-client rates." />
+<meta name="theme-color" content="#050505" />
+<link rel="canonical" href="https://obsidianmedia.online/pricing" />
+<link rel="icon" type="image/png" href="assets/logo.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Pricing — Obsidian Studio" />
+<meta property="og:description" content="Three packages, transparent ranges, no surprise invoices. Founding-client rates for countertop shops and local services." />
+<meta property="og:image" content="assets/logo.png" />
+<meta property="og:url" content="https://obsidianmedia.online/pricing" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Pricing — Obsidian Studio" />
+<meta name="twitter:description" content="Three packages, transparent ranges, no surprise invoices. Founding-client rates." />
+<meta name="twitter:image" content="assets/logo.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ProfessionalService",
+  "@id":"https://obsidianmedia.online/#org",
+  "name":"Obsidian Studio",
+  "description":"Premium websites and landing pages for local service businesses.",
+  "email":"hello@obsidianstudios.online",
+  "url":"https://obsidianmedia.online",
+  "image":"assets/logo.png",
+  "priceRange":"$$",
+  "areaServed":{
+    "@type":"Place",
+    "name":"Ontario, Canada"
+  },
+  "hasOfferCatalog":{
+    "@type":"OfferCatalog",
+    "name":"Web service packages",
+    "itemListElement":[
+      {"@type":"Offer","name":"Starter Site","priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","minPrice":450,"maxPrice":650}},
+      {"@type":"Offer","name":"Growth Site","priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","minPrice":1200,"maxPrice":1800}},
+      {"@type":"Offer","name":"Pro Site","priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","minPrice":2800,"maxPrice":4500}},
+      {"@type":"Offer","name":"Care Plan","priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","minPrice":150,"maxPrice":300,"description":"per month"}}
+    ]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Why are prices below market?","acceptedAnswer":{"@type":"Answer","text":"Obsidian Studio is a new studio building its portfolio. Founding-client rates are intentionally set below Ontario-market norms and rise as our case-study list grows. Locking in at today's number locks you out of that growth."}},
+    {"@type":"Question","name":"Why are these prices ranges, not a single number?","acceptedAnswer":{"@type":"Answer","text":"Final cost depends on content readiness (do you have photos, copy, reviews ready or do we source them?), the number of service-area pages you want generated, and how many revision rounds you want baked in. The fixed-price proposal is sent after you pick a tier — no surprise invoices."}},
+    {"@type":"Question","name":"Do I own the website after it's built?","acceptedAnswer":{"@type":"Answer","text":"Yes. You own the domain, the site files, and the code. We retain none of it. If you walk away, everything comes with you."}},
+    {"@type":"Question","name":"How long does a build take?","acceptedAnswer":{"@type":"Answer","text":"Starter: 7–10 days. Growth: 14–21 days. Pro: 21–35 days. Timelines assume content handoff happens within the first 3 days of kickoff."}},
+    {"@type":"Question","name":"What if I don't know which tier fits?","acceptedAnswer":{"@type":"Answer","text":"Reply 'just curious' to the email you got this from and we'll send a 3-question diagnostic so we can pick together in five minutes."}},
+    {"@type":"Question","name":"What does the Care Plan actually cover?","acceptedAnswer":{"@type":"Answer","text":"Hosting, security monitoring, uptime alerts, plus up to 2 hours per month of content updates, quarterly SEO check-ins, Lighthouse audits, and a monthly form-submission + analytics summary. Billed monthly. Cancel any time."}}
+  ]
+}
+</script>
+
+<style>
+:root{
+  --black:#050505; --black-2:#0a0a0b; --obsidian:#101012; --graphite:#16161a;
+  --panel:rgba(255,255,255,.04); --panel-2:rgba(255,255,255,.07);
+  --line:rgba(230,232,235,.10); --line-2:rgba(230,232,235,.22);
+  --text:#f4f4f2; --muted:#a8a8a4; --soft:#7b7b78;
+  --silver:#d8dadd; --chrome:#f7f7f4; --steel:#9fb0bd;
+  --chrome-grad:linear-gradient(180deg,#f7f7f4 0%,#bdbfc2 45%,#7a7c80 55%,#cfd1d4 100%);
+  --silver-grad:linear-gradient(120deg,#e9ebee 0%,#9da0a5 45%,#f3f4f6 100%);
+  --r:22px; --r-sm:14px; --r-lg:32px;
+  --shadow:0 30px 100px rgba(0,0,0,.55);
+  --max:1200px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Manrope,Inter,system-ui,sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(1000px 600px at 15% 0%,rgba(159,176,189,.10),transparent 60%),
+    radial-gradient(900px 600px at 85% 20%,rgba(216,218,221,.06),transparent 60%),
+    radial-gradient(700px 500px at 50% 100%,rgba(255,255,255,.04),transparent 60%),
+    linear-gradient(180deg,#030303 0%,#0a0a0c 50%,#040404 100%);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  line-height:1.55;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+  background-size:60px 60px;
+  mask-image:linear-gradient(to bottom,rgba(0,0,0,.6),transparent 75%);
+}
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  opacity:.55;mix-blend-mode:overlay;
+}
+main,nav,section,footer{position:relative;z-index:1}
+.container{max-width:var(--max);margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;letter-spacing:.5px;line-height:1.1;margin:0}
+h1{font-size:clamp(44px,6.4vw,80px)}
+h2{font-size:clamp(32px,4vw,52px)}
+h3{font-size:clamp(20px,2vw,24px);font-weight:500}
+.eyebrow{font-family:Manrope,sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--soft);font-weight:600}
+.chrome-text{background:var(--silver-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+p.lead{font-size:18px;color:var(--muted);max-width:60ch}
+
+.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);background:rgba(5,5,5,.62);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;max-width:var(--max);margin:0 auto;padding:0 28px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
+.brand img{height:34px;width:auto;filter:drop-shadow(0 0 12px rgba(216,218,221,.15))}
+.brand-name{font-family:"Cormorant Garamond",serif;font-size:20px;letter-spacing:4px;text-transform:uppercase}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:13.5px;letter-spacing:.5px;transition:color .25s}
+.nav-links a:hover{color:var(--chrome)}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;font-size:13px;letter-spacing:.5px;font-weight:500;text-decoration:none;background:var(--chrome-grad);color:#101013;border:1px solid rgba(255,255,255,.4);box-shadow:0 8px 28px rgba(216,218,221,.18),inset 0 1px 0 rgba(255,255,255,.6);transition:transform .25s ease,box-shadow .25s ease}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 14px 36px rgba(216,218,221,.28),inset 0 1px 0 rgba(255,255,255,.7)}
+.nav-toggle{display:none;background:none;border:1px solid var(--line-2);color:var(--text);width:42px;height:42px;border-radius:12px;cursor:pointer;align-items:center;justify-content:center}
+@media(max-width:900px){
+  .nav-links{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;background:rgba(5,5,5,.96);padding:24px;border-bottom:1px solid var(--line);gap:18px}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:inline-flex}
+  .nav-cta{display:none}
+  .nav-links .nav-cta{display:inline-flex;align-self:flex-start;margin-top:8px}
+}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-size:14px;letter-spacing:.4px;font-weight:500;text-decoration:none;cursor:pointer;border:none;transition:transform .25s,box-shadow .25s,background .25s}
+.btn-primary{background:var(--chrome-grad);color:#0a0a0b;border:1px solid rgba(255,255,255,.4);box-shadow:0 14px 40px rgba(216,218,221,.22),inset 0 1px 0 rgba(255,255,255,.6)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 22px 56px rgba(216,218,221,.30),inset 0 1px 0 rgba(255,255,255,.7)}
+.btn-ghost{background:rgba(255,255,255,.04);color:var(--text);border:1px solid var(--line-2);backdrop-filter:blur(8px)}
+.btn-ghost:hover{background:rgba(255,255,255,.08);border-color:var(--chrome);transform:translateY(-2px)}
+.btn-text{background:none;color:var(--muted);padding:10px 0;border-bottom:1px solid var(--line-2);border-radius:0}
+.btn-text:hover{color:var(--chrome);border-color:var(--chrome)}
+
+.hero{padding:80px 0 60px;text-align:center;position:relative}
+.hero h1{max-width:18ch;margin:0 auto 24px}
+.hero h1 em{font-style:italic;color:var(--silver)}
+.hero-sub{max-width:62ch;margin:0 auto 36px;font-size:18px;color:var(--muted)}
+.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:18px}
+
+section.s{padding:80px 0;position:relative}
+.s-head{max-width:740px;margin:0 auto 56px;text-align:center}
+.s-head .eyebrow{display:block;margin-bottom:16px}
+.s-head p{color:var(--muted);font-size:17px;margin-top:18px}
+
+.founder-note{
+  max-width:780px;margin:0 auto 24px;padding:22px 26px;border-radius:var(--r-sm);
+  background:linear-gradient(180deg,rgba(216,218,221,.06),rgba(216,218,221,.01));
+  border:1px solid var(--line-2);font-size:15px;color:var(--muted);text-align:center
+}
+.founder-note strong{color:var(--silver);font-weight:600}
+
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1180px;margin:0 auto;padding:0 28px}
+@media(max-width:1000px){.pricing{grid-template-columns:1fr}}
+.price{padding:36px 30px;border-radius:var(--r);background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));border:1px solid var(--line);display:flex;flex-direction:column;gap:18px;position:relative}
+.price.best{background:linear-gradient(180deg,rgba(216,218,221,.10),rgba(216,218,221,.02));border:1px solid var(--line-2);box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.price .tag{position:absolute;top:-12px;left:30px;background:var(--chrome-grad);color:#0a0a0b;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;padding:6px 14px;border-radius:999px}
+.price h3{font-size:24px;margin-top:18px}
+.price .summary{font-size:14px;color:var(--muted);margin-bottom:4px}
+.amount{font-family:"Cormorant Garamond",serif;font-size:48px;color:var(--chrome)}
+.amount small{font-size:14px;color:var(--soft);font-family:Manrope;margin-left:6px;letter-spacing:1px}
+.price ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+.price li{padding-left:24px;position:relative;color:var(--muted);font-size:14.5px;line-height:1.5}
+.price li::before{content:"";position:absolute;left:0;top:9px;width:10px;height:1px;background:var(--silver)}
+.price .incl{margin-top:8px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--soft);font-weight:600}
+.price .price-cta{justify-self:start;margin-top:14px}
+
+.compare{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--obsidian);margin:0 auto;max-width:1180px}
+.compare-row{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;border-top:1px solid var(--line);padding:18px 24px;font-size:14.5px;align-items:center}
+.compare-row:first-child{border-top:none;background:rgba(255,255,255,.03);color:var(--soft);font-size:11.5px;letter-spacing:2px;text-transform:uppercase}
+.compare-row > div + div{border-left:1px solid var(--line);padding-left:20px;color:var(--muted)}
+.compare-row > div:last-child{color:var(--text)}
+@media(max-width:760px){.compare-row{grid-template-columns:1.2fr 1fr 1fr 1fr;padding:14px 14px;font-size:13px}.compare-row > div{padding-left:10px !important}.hide-sm{display:none}}
+
+.faq{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+details.q{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-sm);overflow:hidden;transition:border-color .25s}
+details.q[open]{border-color:var(--line-2);background:var(--panel-2)}
+details.q summary{cursor:pointer;padding:20px 24px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;font-weight:500;font-size:15px}
+details.q summary::-webkit-details-marker{display:none}
+details.q summary::after{content:"+";font-family:"Cormorant Garamond",serif;font-size:24px;color:var(--silver);transition:transform .25s}
+details.q[open] summary::after{transform:rotate(45deg)}
+details.q .a{padding:0 24px 22px;color:var(--muted);font-size:15px}
+
+.contact-wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:start;max-width:1080px;margin:0 auto;padding:0 28px}
+@media(max-width:900px){.contact-wrap{grid-template-columns:1fr}}
+.contact-side h2{margin-bottom:18px}
+.contact-side p{color:var(--muted);margin-bottom:24px}
+.contact-side .info{display:flex;flex-direction:column;gap:14px;margin-top:32px}
+.contact-side .info div{font-size:14px;color:var(--muted)}
+.contact-side .info strong{display:block;color:var(--silver);font-weight:500;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
+form.contact{padding:36px;border-radius:var(--r);background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));border:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form.contact .full{grid-column:1/-1}
+form.contact label{display:flex;flex-direction:column;gap:6px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--soft);font-weight:600}
+form.contact input,form.contact select,form.contact textarea{font-family:inherit;font-size:15px;padding:13px 14px;border-radius:10px;background:rgba(0,0,0,.35);border:1px solid var(--line-2);color:var(--text);outline:none;transition:border-color .2s,background .2s}
+form.contact input:focus,form.contact select:focus,form.contact textarea:focus{border-color:var(--chrome);background:rgba(0,0,0,.5)}
+form.contact textarea{min-height:130px;resize:vertical}
+.hp{position:absolute;left:-10000px;opacity:0;pointer-events:none;height:0;width:0}
+.consent{font-size:12.5px;color:var(--soft);line-height:1.5}
+.form-status{font-size:14px;padding:14px 16px;border-radius:10px;display:none}
+.form-status.show{display:block}
+.form-status.success{background:rgba(158,230,193,.08);border:1px solid rgba(158,230,193,.3);color:#9ee6c1}
+.form-status.error{background:rgba(255,157,157,.08);border:1px solid rgba(255,157,157,.3);color:#ff9d9d}
+button[type=submit]{justify-self:start}
+button[type=submit]:disabled{opacity:.6;cursor:wait}
+
+footer{padding:60px 0 40px;border-top:1px solid var(--line);margin-top:40px}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;max-width:var(--max);margin:0 auto;padding:0 28px}
+.foot p{margin:0;color:var(--soft);font-size:13px}
+.foot a{color:var(--muted);text-decoration:none;font-size:13px}
+.foot a:hover{color:var(--chrome)}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="/" class="brand" aria-label="Obsidian Studio home">
+      <img src="assets/logo.png" alt="Obsidian Studio logo" />
+      <span class="brand-name">Obsidian</span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="document.getElementById('navlinks').classList.toggle('open');this.setAttribute('aria-expanded',document.getElementById('navlinks').classList.contains('open'))">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <div class="nav-links" id="navlinks">
+      <a href="/#services">Services</a>
+      <a href="/#mocks">Mock Websites</a>
+      <a href="/#process">Process</a>
+      <a href="/pricing" aria-current="page">Pricing</a>
+      <a href="/#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="nav-cta">Request Free Preview</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<header class="hero">
+  <div class="container">
+    <span class="eyebrow reveal">Pricing</span>
+    <h1 class="reveal" style="margin-top:18px">Three packages.<br/><em class="chrome-text">Founding-client rates.</em></h1>
+    <p class="hero-sub reveal">Websites and landing pages for local service businesses — countertop shops, contractors, barber shops, real-estate agents. Built once, owned by you forever.</p>
+    <div class="hero-ctas reveal">
+      <a href="#contact" class="btn btn-primary">Send a brief →</a>
+      <a href="#compare" class="btn btn-ghost">Compare packages</a>
+    </div>
+  </div>
+</header>
+
+<section class="s" id="tiers" aria-labelledby="tiers-h">
+  <div class="s-head reveal">
+    <span class="eyebrow">The Menu</span>
+    <h2 id="tiers-h">Pick a tier. Tiers stack.</h2>
+    <p>Anything in a lower tier stays in every higher one. Most countertop shops start at Starter or Growth and move up within 6–12 months once the phone is ringing.</p>
+  </div>
+
+  <div class="founder-note reveal">
+    <strong>About these prices.</strong> Obsidian Studio is a new studio building its portfolio. Rates are intentionally below market to land our first handful of clients — locking in at today's number locks you out of the marketing rate rise. Early clients get genuine value <em>and</em> a founding-client rate we won't be able to offer again.
+  </div>
+
+  <div class="pricing" style="margin-top:40px">
+
+    <!-- Starter -->
+    <article class="price reveal" id="starter">
+      <span class="incl">Tier 1 · Foundation</span>
+      <h3>Starter Site</h3>
+      <p class="summary">For new / single-location businesses. Gets the doors open, gets found on Google, gets the phone ringing.</p>
+      <div class="amount">$450 – $650<small>one-time</small></div>
+      <ul>
+        <li>One-page marketing site (desktop + mobile optimized)</li>
+        <li>Hero, Services, Why Us, Process, Gallery, Reviews, Contact sections</li>
+        <li>Custom domain + HTTPS on a fast CDN</li>
+        <li>On-page SEO foundation (meta, OG, sitemap, robots.txt)</li>
+        <li>Local Schema markup for "near me" search</li>
+        <li>Contact form wired to your email</li>
+        <li>Tap-to-call + sticky bottom CTA on mobile</li>
+        <li>Google Maps embed + business hours</li>
+        <li>14-day post-launch bug-fix window</li>
+      </ul>
+      <a href="#contact" class="btn btn-ghost price-cta">Choose Starter →</a>
+    </article>
+
+    <!-- Growth (featured) -->
+    <article class="price best reveal" id="growth">
+      <span class="tag">Most picked</span>
+      <span class="incl">Tier 2 · Growth</span>
+      <h3>Growth Site</h3>
+      <p class="summary">For established shops. Built to actually rank and convert — not just exist.</p>
+      <div class="amount">$1,200 – $1,800<small>one-time</small></div>
+      <ul>
+        <li><strong>Everything in Starter, plus:</strong></li>
+        <li>Up to 5 service / material pages (e.g. /granite-countertops, /marble-vanity-tops)</li>
+        <li>Service-area pages for top 3–5 cities/towns you serve</li>
+        <li>Before/after gallery with mobile-friendly lightbox</li>
+        <li>Interactive estimate calculator (kitchen / bath / island, linear-foot, material)</li>
+        <li>Google Reviews widget pulled from your Business Profile</li>
+        <li>Per-page FAQ with FAQPage JSON-LD</li>
+        <li>Image optimization pipeline (lazy-load, srcset, WebP/AVIF)</li>
+        <li>prefers-reduced-motion accessibility pass</li>
+        <li>2 rounds of revision on copy + layout</li>
+        <li>30-day post-launch support window</li>
+      </ul>
+      <a href="#contact" class="btn btn-primary price-cta">Choose Growth →</a>
+    </article>
+
+    <!-- Pro -->
+    <article class="price reveal" id="pro">
+      <span class="incl">Tier 3 · Premium</span>
+      <h3>Pro Site</h3>
+      <p class="summary">For brand-positioned shops that want to be the obvious choice in the region.</p>
+      <div class="amount">$2,800 – $4,500<small>one-time</small></div>
+      <ul>
+        <li><strong>Everything in Starter + Growth, plus:</strong></li>
+        <li>Blog / Project Journal with case studies</li>
+        <li>Slab visualizer — drop a slab texture onto your own kitchen photo</li>
+        <li>Material comparison tool (Granite vs Marble vs Quartz)</li>
+        <li>Photo upload on the estimate form</li>
+        <li>Pinterest / Instagram-style slab feed with tag filters</li>
+        <li>Financing calculator / "as low as $X/mo" widget</li>
+        <li>Live chat → SMS routing</li>
+        <li>Server-side form validation + spam gate</li>
+        <li>Lighthouse 95+ score guarantee</li>
+        <li>Cookie-free analytics + 30-day conversion report</li>
+        <li>3 rounds of revision on copy + layout</li>
+        <li>60-day post-launch support</li>
+      </ul>
+      <a href="#contact" class="btn btn-ghost price-cta">Choose Pro →</a>
+    </article>
+
+  </div>
+
+  <!-- Care Plan -->
+  <article class="price reveal" id="care" style="max-width:780px;margin:48px auto 0;flex-direction:row;flex-wrap:wrap;gap:18px 32px;align-items:center">
+    <div style="min-width:220px;flex:1 1 220px">
+      <span class="incl">Add-on</span>
+      <h3 style="margin-top:8px">Care Plan</h3>
+      <p class="summary" style="margin-top:6px">Optional monthly retainer. Websites rot — this keeps you ahead.</p>
+      <div class="amount">$150 – $300<small>/ month · cancel any time</small></div>
+    </div>
+    <ul style="flex:1 1 360px">
+      <li>Hosting + security monitoring + uptime alerts</li>
+      <li>Up to 2 hrs/mo of content updates (copy, photos, FAQ)</li>
+      <li>Quarterly SEO check-in + Lighthouse audit</li>
+      <li>Monthly form + analytics summary</li>
+      <li>Priority support (24–48h)</li>
+    </ul>
+    <a href="#contact" class="btn btn-ghost price-cta" style="flex-basis:100%;text-align:center">Add Care Plan →</a>
+  </article>
+</section>
+
+<section class="s" id="compare" aria-labelledby="cmp-h">
+  <div class="s-head reveal" style="margin-bottom:36px">
+    <span class="eyebrow">Compare</span>
+    <h2 id="cmp-h">What's in each tier, at a glance</h2>
+    <p>If a row matters to you, the higher tier has it.</p>
+  </div>
+  <div class="compare reveal">
+    <div class="compare-row">
+      <div>Feature</div>
+      <div>Starter $450–$650</div>
+      <div>Growth $1,200–$1,800</div>
+      <div class="hide-sm">Pro $2,800–$4,500</div>
+    </div>
+    <div class="compare-row"><div>Marketing site (one-page)</div><div>Included</div><div>—</div><div class="hide-sm">—</div></div>
+    <div class="compare-row"><div>Multi-page build (services, area pages)</div><div>—</div><div>Up to 5 materials + 3–5 cities</div><div class="hide-sm">Up to 5 materials + 3–5 cities</div></div>
+    <div class="compare-row"><div>Estimate / quote calculator</div><div>—</div><div>Included</div><div class="hide-sm">Included</div></div>
+    <div class="compare-row"><div>Google Reviews widget</div><div>—</div><div>Included</div><div class="hide-sm">Included</div></div>
+    <div class="compare-row"><div>FAQ JSON-LD</div><div>—</div><div>Included</div><div class="hide-sm">Included</div></div>
+    <div class="compare-row"><div>Image optimization + a11y pass</div><div>—</div><div>Included</div><div class="hide-sm">Included</div></div>
+    <div class="compare-row"><div>Blog / Project Journal</div><div>—</div><div>—</div><div class="hide-sm">Included</div></div>
+    <div class="compare-row"><div>Slab visualizer</div><div>—</div><div>—</div><div class="hide-sm">Included</div></div>
+    <div class="compare-row"><div>Photo upload on form</div><div>—</div><div>—</div><div class="hide-sm">Included</div></div>
+    <div class="compare-row"><div>Material comparison tool</div><div>—</div><div>—</div><div class="hide-sm">Included</div></div>
+    <div class="compare-row"><div>Financing calculator</div><div>—</div><div>—</div><div class="hide-sm">Included</div></div>
+    <div class="compare-row"><div>Chat → SMS routing</div><div>—</div><div>—</div><div class="hide-sm">Included</div></div>
+    <div class="compare-row"><div>Spam gate + analytics</div><div>—</div><div>—</div><div class="hide-sm">Included</div></div>
+    <div class="compare-row"><div>Lighthouse 95+ guarantee</div><div>—</div><div>—</div><div class="hide-sm">Included</div></div>
+    <div class="compare-row"><div>Revision rounds</div><div>1</div><div>2</div><div class="hide-sm">3</div></div>
+    <div class="compare-row"><div>Post-launch support</div><div>14 days</div><div>30 days</div><div class="hide-sm">60 days</div></div>
+    <div class="compare-row"><div>Optional Care Plan retainer</div><div>Available</div><div>Available</div><div class="hide-sm">Available</div></div>
+  </div>
+</section>
+
+<section class="s" id="faq" aria-labelledby="faq-h">
+  <div class="s-head reveal" style="margin-bottom:36px">
+    <span class="eyebrow">FAQ</span>
+    <h2 id="faq-h">Things people ask before picking a tier</h2>
+  </div>
+  <div class="faq reveal">
+    <details class="q" open>
+      <summary>Why are these prices below market?</summary>
+      <div class="a">Obsidian Studio is a new studio building its portfolio. Founding-client rates are intentionally below Ontario-market norms and rise as our case-study list grows. Locking in at today's number locks you out of that rise. Early clients get genuine value <em>and</em> a rate we won't be able to offer again.</div>
+    </details>
+    <details class="q">
+      <summary>Why are these prices ranges, not a single number?</summary>
+      <div class="a">Final cost depends on content readiness (do you have photos, copy, reviews ready or do we source them?), the number of service-area pages you want generated, and how many revision rounds you want baked in. The fixed-price proposal is sent after you pick a tier — no surprise invoices.</div>
+    </details>
+    <details class="q">
+      <summary>Do I own the website after it's built?</summary>
+      <div class="a">Yes. Domain, code, images, copy — yours. We retain none of it. If you walk away, everything comes with you.</div>
+    </details>
+    <details class="q">
+      <summary>How long does a build take?</summary>
+      <div class="a">Starter: 7–10 days. Growth: 14–21 days. Pro: 21–35 days. These assume content handoff (photos, logo, copy, reviews) happens within the first 3 days of kickoff.</div>
+    </details>
+    <details class="q">
+      <summary>What if I don't know which tier fits?</summary>
+      <div class="a">Reply "just curious" to the email you got this from (or send a fresh one via the form below). I'll send a 3-question diagnostic so we can pick together in five minutes.</div>
+    </details>
+    <details class="q">
+      <summary>What does the Care Plan actually cover?</summary>
+      <div class="a">Hosting + security monitoring + uptime alerts; up to 2 hours per month of content updates; quarterly SEO check-ins and Lighthouse audits; a monthly form + analytics summary; priority support. Billed monthly, cancel any time.</div>
+    </details>
+  </div>
+</section>
+
+<section class="s" id="contact" aria-labelledby="contact-h">
+  <div class="s-head reveal" style="margin-bottom:48px">
+    <span class="eyebrow">Start</span>
+    <h2 id="contact-h">Reply with a tier (or "just curious")</h2>
+    <p>I send a fixed-price quote within 48 hours of receiving this form. If neither tier fits, say so and I'll recommend one.</p>
+  </div>
+  <div class="contact-wrap reveal">
+    <aside class="contact-side">
+      <h2>Shayan Salimi<br/>Obsidian Studio</h2>
+      <p>Single-operator studio. Every tier is built personally — no agencies, no account managers, no middlemen.</p>
+      <div class="info">
+        <div><strong>Email</strong>hello@obsidianstudios.online</div>
+        <div><strong>Territory</strong>Ontario, Canada & remote</div>
+        <div><strong>Status</strong>Accepting 2–3 founding clients this quarter</div>
+        <div><strong>Reply time</strong>Within 48 hours, Mon–Fri</div>
+      </div>
+    </aside>
+
+    <form class="contact" id="contactForm" novalidate>
+      <label>Your name<input type="text" name="name" required autocomplete="name" /></label>
+      <label>Email<input type="email" name="email" required autocomplete="email" /></label>
+      <label class="full">Business name<input type="text" name="business" autocomplete="organization" /></label>
+      <label>Phone (optional)<input type="tel" name="phone" autocomplete="tel" /></label>
+      <label>Website (if any)<input type="url" name="link" placeholder="https://" /></label>
+      <label class="full">Which tier?<select name="package" required>
+        <option value="">Select a tier —</option>
+        <option>1 · Starter Site ($450–$650)</option>
+        <option>2 · Growth Site ($1,200–$1,800)</option>
+        <option>3 · Pro Site ($2,800–$4,500)</option>
+        <option>Add Care Plan ($150–$300/mo)</option>
+        <option>Just curious — please recommend</option>
+      </select></label>
+      <label class="full">What's on your mind? (timeline, content readiness, anything blocking the decision)<textarea name="details" required placeholder="Open by telling us where your business is today and what you want different in 90 days."></textarea></label>
+
+      <div class="hp" aria-hidden="true">
+        <label>Company website<input type="text" name="company_website" tabindex="-1" autocomplete="off" /></label>
+      </div>
+      <input type="hidden" name="source" value="obsidianmedia.online/pricing" />
+
+      <div class="full consent">By submitting this form, you agree to be contacted about your website request. Your information is used only to respond to your inquiry.</div>
+
+      <div class="full">
+        <button type="submit" class="btn btn-primary">Send pricing inquiry →</button>
+      </div>
+
+      <div class="full form-status" id="formStatus" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="foot">
+    <div style="display:flex;align-items:center;gap:12px">
+      <img src="assets/logo.png" alt="" style="height:28px;width:auto;opacity:.85" />
+      <p>© <span id="yr"></span> Obsidian Studio · hello@obsidianstudios.online</p>
+    </div>
+    <div style="display:flex;gap:24px">
+      <a href="/">Home</a>
+      <a href="/pricing">Pricing</a>
+      <a href="#contact">Inquiry</a>
+      <a href="#" aria-disabled="true">Privacy Policy coming soon</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+document.querySelectorAll('#navlinks a').forEach(a => a.addEventListener('click', () => {
+  document.getElementById('navlinks').classList.remove('open');
+}));
+
+const form = document.getElementById('contactForm');
+const status = document.getElementById('formStatus');
+const fallbackMailto = 'mailto:hello@obsidianstudios.online?subject=' + encodeURIComponent('Obsidian Studio pricing inquiry') + '&body=' + encodeURIComponent('Please open the form and paste your details here.');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  status.className = 'form-status'; status.textContent = '';
+
+  const fd = new FormData(form);
+  const data = Object.fromEntries(fd.entries());
+  if (!data.name || !data.email || !data.details || !data.package) {
+    status.className = 'form-status show error';
+    status.textContent = 'Please fill in name, email, tier, and details.';
+    return;
+  }
+
+  const btn = form.querySelector('button[type=submit]');
+  btn.disabled = true; const old = btn.textContent; btn.textContent = 'Sending…';
+
+  try {
+    const subject = encodeURIComponent('Pricing inquiry from ' + (data.business || data.name));
+    const body = encodeURIComponent([
+      'Name: ' + data.name,
+      'Email: ' + data.email,
+      'Phone: ' + (data.phone || ''),
+      'Business: ' + (data.business || ''),
+      'Website: ' + (data.link || ''),
+      'Tier: ' + data.package,
+      '',
+      'Details:',
+      data.details,
+    ].join('\n'));
+    window.location.href = 'mailto:hello@obsidianstudios.online?subject=' + subject + '&body=' + body;
+    status.className = 'form-status show success';
+    status.textContent = 'Your email app should open with a prefilled message. If it does not, email hello@obsidianstudios.online directly.';
+    form.reset();
+  } catch (err) {
+    window.location.href = fallbackMailto;
+    status.className = 'form-status show error';
+    status.textContent = 'Your browser blocked the mail link. Please email hello@obsidianstudios.online directly.';
+  } finally {
+    btn.disabled = false; btn.textContent = old;
+  }
+});
+</script>
+
+</body>
+</html>
