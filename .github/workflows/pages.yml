@@ -25,6 +25,7 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html _site/index.html
+          cp pricing.html _site/pricing.html
           cp -R assets _site/assets
           cp -R example _site/example
           cp CNAME _site/CNAME

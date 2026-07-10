@@ -12,12 +12,12 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Pricing — Obsidian Studio" />
 <meta property="og:description" content="Three packages, transparent ranges, no surprise invoices. Founding-client rates for local service businesses." />
-<meta property="og:image" content="assets/logo.png" />
+<meta property="og:image" content="assets/og-cover.png" />
 <meta property="og:url" content="https://obsidianmedia.online/pricing" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Pricing — Obsidian Studio" />
-<meta name="twitter:description" content="Three packages, transparent ranges, no surprise invoices. Founding-client rates." />
-<meta name="twitter:image" content="assets/logo.png" />
+<meta name="twitter:description" content="Three packages, transparent ranges, no surprise invoices. Founding-client rates for local service businesses." />
+<meta name="twitter:image" content="assets/og-cover.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -244,11 +244,11 @@ footer{padding:60px 0 40px;border-top:1px solid var(--line);margin-top:40px}
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
     </button>
     <div class="nav-links" id="navlinks">
-      <a href="/#services">Services</a>
-      <a href="/#mocks">Mock Websites</a>
-      <a href="/#process">Process</a>
+      <a href="/">Home</a>
       <a href="/pricing" aria-current="page">Pricing</a>
-      <a href="/#faq">FAQ</a>
+      <a href="#tiers">Packages</a>
+      <a href="#compare">Compare</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
       <a href="#contact" class="nav-cta">Request Free Preview</a>
     </div>
@@ -459,6 +459,12 @@ footer{padding:60px 0 40px;border-top:1px solid var(--line);margin-top:40px}
     </aside>
 
     <form class="contact" id="contactForm" novalidate>
+      <input type="hidden" name="access_key" value="PUT_YOUR_WEB3FORMS_KEY_HERE" />
+      <input type="hidden" name="subject" value="Pricing inquiry from Obsidian Studio /pricing" />
+      <input type="hidden" name="from_name" value="Obsidian Studio pricing page" />
+      <input type="hidden" name="redirect" value="https://obsidianmedia.online/pricing?sent=1" />
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-10000px;opacity:0;pointer-events:none" aria-hidden="true" />
+
       <label>Your name<input type="text" name="name" required autocomplete="name" /></label>
       <label>Email<input type="email" name="email" required autocomplete="email" /></label>
       <label class="full">Business name<input type="text" name="business" autocomplete="organization" /></label>
@@ -510,6 +516,18 @@ footer{padding:60px 0 40px;border-top:1px solid var(--line);margin-top:40px}
 <script>
 document.getElementById('yr').textContent = new Date().getFullYear();
 
+if (new URLSearchParams(location.search).get('sent') === '1') {
+  window.addEventListener('load', () => {
+    const f = document.getElementById('contactForm');
+    if (f) {
+      const st = document.getElementById('formStatus');
+      st.className = 'form-status show success';
+      st.textContent = "Thanks — your inquiry is in. I'll reply within 48 hours.";
+    }
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  });
+}
+
 const io = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
 }, { threshold: 0.12 });
@@ -522,42 +540,46 @@ document.querySelectorAll('#navlinks a').forEach(a => a.addEventListener('click'
 const form = document.getElementById('contactForm');
 const status = document.getElementById('formStatus');
 const fallbackMailto = 'mailto:hello@obsidianstudios.online?subject=' + encodeURIComponent('Obsidian Studio pricing inquiry') + '&body=' + encodeURIComponent('Please open the form and paste your details here.');
+
+function showStatus(kind, msg) {
+  status.className = 'form-status show ' + kind;
+  status.textContent = msg;
+}
+
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
-  status.className = 'form-status'; status.textContent = '';
+  showStatus('', '');
 
   const fd = new FormData(form);
   const data = Object.fromEntries(fd.entries());
   if (!data.name || !data.email || !data.details || !data.package) {
-    status.className = 'form-status show error';
-    status.textContent = 'Please fill in name, email, tier, and details.';
+    showStatus('error', 'Please fill in name, email, tier, and details.');
     return;
   }
+  if (data.access_key === 'PUT_YOUR_WEB3FORMS_KEY_HERE') {
+    showStatus('error', 'Form not yet wired — please email hello@obsidianstudios.online directly.');
+    return;
+  }
+  if (data.botcheck) { showStatus('success', 'Thanks — we\'ll be in touch.'); return; }
 
   const btn = form.querySelector('button[type=submit]');
   btn.disabled = true; const old = btn.textContent; btn.textContent = 'Sending…';
 
   try {
-    const subject = encodeURIComponent('Pricing inquiry from ' + (data.business || data.name));
-    const body = encodeURIComponent([
-      'Name: ' + data.name,
-      'Email: ' + data.email,
-      'Phone: ' + (data.phone || ''),
-      'Business: ' + (data.business || ''),
-      'Website: ' + (data.link || ''),
-      'Tier: ' + data.package,
-      '',
-      'Details:',
-      data.details,
-    ].join('\n'));
-    window.location.href = 'mailto:hello@obsidianstudios.online?subject=' + subject + '&body=' + body;
-    status.className = 'form-status show success';
-    status.textContent = 'Your email app should open with a prefilled message. If it does not, email hello@obsidianstudios.online directly.';
-    form.reset();
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: fd
+    });
+    const json = await res.json().catch(() => ({}));
+    if (res.ok && json.success) {
+      showStatus('success', 'Thanks — your inquiry is in. I\'ll reply within 48 hours.');
+      form.reset();
+    } else {
+      throw new Error(json.message || 'Submission failed');
+    }
   } catch (err) {
     window.location.href = fallbackMailto;
-    status.className = 'form-status show error';
-    status.textContent = 'Your browser blocked the mail link. Please email hello@obsidianstudios.online directly.';
+    showStatus('error', 'Submission failed — opening your email app as a fallback.');
   } finally {
     btn.disabled = false; btn.textContent = old;
   }
